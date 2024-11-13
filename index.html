@@ -5,13 +5,13 @@
 </head>
 <body>
   <h2>Marcação de Ponto</h2>
-  <form id="pontoForm">
-    Nome: <input type="text" id="nome" required><br>
-    Local de Trabalho: <input type="text" id="localTrabalho" required><br>
-    Horário de Entrada: <input type="time" id="entrada" required><br>
-    Horário de Saída: <input type="time" id="saida" required><br>
-    <input type="hidden" id="latitude">
-    <input type="hidden" id="longitude">
+  <form id="pontoForm" action="http://localhost:3000/submit" method="POST">
+    Nome: <input type="text" id="nome" name="nome" required><br>
+    Local de Trabalho: <input type="text" id="localTrabalho" name="localTrabalho" required><br>
+    Horário de Entrada: <input type="time" id="entrada" name="entrada" required><br>
+    Horário de Saída: <input type="time" id="saida" name="saida" required><br>
+    <input type="hidden" id="latitude" name="latitude">
+    <input type="hidden" id="longitude" name="longitude">
     <button type="button" onclick="getLocation()">Enviar</button>
   </form>
 
